@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <div>
+            <h1>Create a new course:</h1>
+            <hr/>
+            <form action="/web/course/create" method="POST">
+
+            
+                <input type="text" placeholder="Course name" name="create_name" required pattern=".{5,}" title="A required field with min length of 5 characters."/><br><br>
+                <input type="text" placeholder="Code" name="create_code" required pattern="[a-zA-Z]{3}[0-9]{3}" title="A required field must match 3 letters followed by 3 numbers."/><br><br>
+                <input placeholder="Description(optional)" name="create_description" maxlength="200" size="100" /><br><br>
+                <button>Submit</button>
+
+            </form>
+        </div>
+    </body>
+</html>
+</html>

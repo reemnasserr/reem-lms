@@ -181,9 +181,9 @@ app.put('/api/students/:id', (req , res )=>{
     // Update the student 
     // Return the updated student
  
+    student.Name = req.body.Name;
+    student.Code =  req.body.Code;
 
-    student.Name = student.Name  ;
-    student.Code = student.Code ;
 
     res.send(student);
 

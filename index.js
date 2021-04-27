@@ -48,13 +48,13 @@ app.get('/api/students/:id', (req, res) => {
     res.send(student);
 });
 
-app.get('/web/student/create',(req , res) =>{
+app.get('/web/students/create',(req , res) =>{
 
     const b = path.join(__dirname,'/student.html')
     res.sendFile(b);
 });
 
-app.get('/web/course/create',(req , res) =>{
+app.get('/web/courses/create',(req , res) =>{
 
     const b = path.join(__dirname,'/course.html')
     res.sendFile(b);
@@ -101,7 +101,7 @@ app.post('/api/courses',(req , res) => {
 
 
                             ///////////////////// html forms for createe //////////////
-app.post('/web/student/create',(req , res) => {
+app.post('/web/students/create',(req , res) => {
     console.log("create a new student...")
 
     // const result= validateStudent({"Name" : req.body.create_name,"Code" : req.body.create_code}); // result.error
@@ -118,11 +118,11 @@ app.post('/web/student/create',(req , res) => {
     students.push(student);
 
     //res.send(student);
-    res.redirect('/web/student/create')
+    res.redirect('/web/students/create')
     res.end()
 });
 
-app.post('/web/course/create',(req , res) => {
+app.post('/web/courses/create',(req , res) => {
     console.log("create a new course...")
 
     // const result= validateCourse({"Name" : req.body.create_name,"Code" : req.body.create_code,
@@ -139,7 +139,7 @@ app.post('/web/course/create',(req , res) => {
 
     console.log('Course added succesfully');
     courses.push(course);
-    res.redirect('/web/course/create')
+    res.redirect('/web/courses/create')
     //res.send(course);
     res.end();
 
